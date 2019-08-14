@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Varela+Round&display=swap');
+
+@custom-media --extra-small (width >= 384px);
+@custom-media --small (width >= 512px);
+@custom-media --medium-small (width >= 640px);
+@custom-media --medium (width >= 768px);
+@custom-media --medium-large (width >= 896px);
+@custom-media --large (width >= 1024px);
+@custom-media --extra-large (width >= 1152px);
+
+
+:root {
+  --color-white: #fff;
+  --color-isabelline: #f9eded;
+  --color-powder-blue: #b3e2df;
+  --color-ucla-blue: #4b668c;
+  --color-prune: #6b1230;
+}
+
+body {
+  font-family: Open Sans, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Varela Round, sans-serif;
+}
+
+.is-blue {
+  background-color: var(--color-ucla-blue);
+}
+
+.is-pink {
+  background-color: var(--color-isabelline);
+}
+
+.is-light-blue {
+  background-color: var(--color-powder-blue);
+}
+
+.is-red {
+  background-color: var(--color-prune);
+}

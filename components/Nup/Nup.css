@@ -1,0 +1,63 @@
+:root {
+  --gutter-small: 0.5em;
+  --gutter-default: 1rem;
+  --gutter-large: 2em;
+}
+
+.Nup {
+  display: grid;
+  position: relative;
+  width: 100%;
+
+  & > * + * {
+    margin-top: 1rem;
+  }
+
+  &--gutter-small { grid-gap: var(--gutter-small); }
+  &--gutter-default { grid-gap: var(--gutter-default); }
+  &--gutter-large { grid-gap: var(--gutter-large); }
+
+  @media (--medium-small) {
+    &--two {
+      grid-auto-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+
+      & > * + * {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media (--medium) {
+    &--three {
+      grid-auto-rows: 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      & > * + * {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media (--medium) {
+    &--four {
+      grid-auto-rows: 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      & > * + * {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media (--medium) {
+    &--five {
+      grid-auto-rows: 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+      & > * + * {
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 // index.js
 export const Wrapper = (props) => {
   const {
+    variant,
     children,
     className,
     ...rest
@@ -8,6 +9,7 @@ export const Wrapper = (props) => {
 
   const classes = [
     'Wrapper',
+    variant && `Wrapper--${variant}`,
     className
   ];
 

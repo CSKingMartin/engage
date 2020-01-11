@@ -1,5 +1,6 @@
 // next.config.js
 const withCSS = require('@zeit/next-css');
+const withImages = require('next-images');
 const webpack = require('webpack');
 const path = require('path');
 const pkgpath = require('packpath');
@@ -22,4 +23,4 @@ const config = {
   }
 }
 
-module.exports = withCSS(config);
+module.exports = withImages(withCSS(config));

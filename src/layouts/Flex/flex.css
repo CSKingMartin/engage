@@ -1,0 +1,42 @@
+.Flex {
+  display: flex;
+  flex-direction: column;
+
+  @media (--medium) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .FlexChild {
+    display: inline-block;
+
+    &--large {
+      width: 100%;
+
+      @media (--medium) {
+        width: 60%;
+      }
+
+      @media (--extra-large) {
+        width: 55%
+      }
+    }
+
+    &--small {
+      width: 100%;
+
+      @media (--medium) {
+        width: 30%;
+      }
+
+      @media (--extra-large) {
+        width: 40%
+      }
+    }
+
+    &.is-sticky {
+      position: sticky;
+      top: 4rem;
+    }
+  }
+}

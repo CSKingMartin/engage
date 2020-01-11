@@ -11,7 +11,10 @@ const config = {
   cssModules: false,
   webpack: (config, { dev }) => {
     config.resolve.alias = {
-      '@components': source('components'),
+      '@tags': source('src/tags'),
+      '@components': source('src/components'),
+      '@layouts': source('src/layouts'),
+      '@assets': source('static/assets'),
       ...config.resolve.alias
     };
 

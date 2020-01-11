@@ -1,8 +1,8 @@
 // index.js
 
-import Heading from '@components/Heading';
-import Nup from '@components/Nup';
-import Wrapper from '@components/Wrapper';
+import Heading from '@tags/Heading';
+import Nup from '@layouts/Nup';
+import Wrapper from '@layouts/Wrapper';
 
 export const Page = () => {
   return (

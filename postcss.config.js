@@ -6,7 +6,7 @@ module.exports = {
     require('postcss-extend'),
     require('postcss-custom-media')({
       preserve: true,
-      importFrom: 'components/Global.css'
+      importFrom: 'src/css/Global.css'
     }),
     require('postcss-preset-env')({
       stage: 1,

@@ -46,14 +46,6 @@ export const Page = () => {
             non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </FlexChild>
-
-        <FlexChild variant="large">
-          <img src={img1} />
-          <img src={img2} />
-          <img src={img3} />
-          <img src={img4} />
-          <img src={img5} />
-        </FlexChild>
       </Flex>
       </Wrapper>
     </div>

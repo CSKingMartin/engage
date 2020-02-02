@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Varela+Round&display=swap');
-
 @custom-media --extra-small (width >= 384px);
 @custom-media --small (width >= 512px);
 @custom-media --medium-small (width >= 640px);
@@ -11,22 +9,29 @@
 
 :root {
   --color-white: #fff;
-  --color-isabelline: #f9eded;
-  --color-powder-blue: #b3e2df;
-  --color-ucla-blue: #4b668c;
-  --color-prune: #6b1230;
+  --color-yellow: #ffdd7f;
+  --color-powder-blue: #b1dbe2;
+  --color-bdazzled-blue: #375c91;
+  --color-claret: #6b1230;
+}
+
+div {
+  box-sizing: border-box;
 }
 
 body {
-  font-family: Open Sans, sans-serif;
+  font-family: Noto Sans, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 p {
+  line-height: 45px;
   margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Varela Round, sans-serif;
+  font-family: Work Sans, sans-serif;
   margin: 0;
 }
 
@@ -66,12 +71,20 @@ h6 {
   }
 }
 
-.is-blue {
-  background-color: var(--color-ucla-blue);
+.text-centered {
+  text-align: center;
 }
 
-.is-pink {
-  background-color: var(--color-isabelline);
+.text-jumbo {
+  font-size: 8rem;
+}
+
+.is-blue {
+  background-color: var(--color-bdazzled-blue);
+}
+
+.is-yellow {
+  background-color: var(--color-yellow);
 }
 
 .is-light-blue {
@@ -79,5 +92,17 @@ h6 {
 }
 
 .is-red {
-  background-color: var(--color-prune);
+  background-color: var(--color-claret);
+}
+
+.has-white-text {
+  color: var(--color-white);
+}
+
+.has-blue-text {
+  color: var(--color-ucla-blue);
+}
+
+.has-yellow-text {
+  color: var(--color-yellow);
 }

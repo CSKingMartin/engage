@@ -1,8 +1,10 @@
 // index.js
+// import fetch from 'isomorphic-unfetch';
 
 import Flex, { FlexChild } from '@layouts/Flex';
 import Heading from '@tags/Heading';
 import Nup from '@layouts/Nup';
+import PageHero from '@components/pagehero'
 import Wrapper from '@layouts/Wrapper';
 
 import img1 from '@assets/images/timeline/2014/2014_1.jpg';
@@ -11,9 +13,35 @@ import img3 from '@assets/images/timeline/2014/2014_3.jpg';
 import img4 from '@assets/images/timeline/2014/2014_4.jpg';
 import img5 from '@assets/images/timeline/2014/2014_5.jpg';
 
+import background from '@assets/images/home/engage-hero.jpeg';
+
 export const Page = () => {
+  const target = new Date('09/20/20');
+
+  const now = new Date();
+
+  const distance = target - now;
+
+  const time = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  console.log(time);
+
   return (
     <div>
+      <PageHero bkgImg={background}>
+        <Heading>
+          Countdown:
+          <br/>
+          <span className="text-jumbo">
+            {time}
+          </span>
+          <br />
+          <span className="heading--h2">days until...</span>
+        </Heading>
+        <p>
+          Carlee Parsley and Conner Wells say goodbye to their lives of hedonism and debauchery to settle down together.
+        </p>
+      </PageHero>
       <Wrapper className="has-rhythm">
         <Heading>The quick brown fox jumped over the lazy dog.</Heading>
         <Heading tagName="h2">The quick brown fox jumped over the lazy dog.</Heading>

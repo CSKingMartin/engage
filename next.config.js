@@ -17,7 +17,7 @@ const config = {
       '@layouts': source('src/layouts'),
       '@assets': source('static/assets'),
       ...config.resolve.alias
-    };
+    }
 
     return config
   }

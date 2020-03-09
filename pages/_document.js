@@ -19,6 +19,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <title>Conner and Carlee 2020</title>
           <link href="https://fonts.googleapis.com/css?family=Work+Sans:600&display=swap" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet" /> 
         </Head>

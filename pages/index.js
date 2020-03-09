@@ -3,7 +3,7 @@
 
 import Button from '@tags/button';
 import ComplexMap from '@components/complex-map';
-import Flex, { FlexChild } from '@layouts/Flex';
+import Flex, { FlexChild } from '@layouts/flex';
 import GlobalHeader from '@components/global-header';
 import Heading from '@tags/heading';
 import Icon from '@tags/icon';

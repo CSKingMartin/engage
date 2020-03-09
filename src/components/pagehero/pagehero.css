@@ -1,40 +1,33 @@
-.pagehero {
-  height: 75rem;
-  font-size: 2rem;
+.page-hero {
   position: relative;
 
-  &__footer {
-    height: 8rem;
-    margin: -8rem 8rem;
+  &__container {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 0 6rem;
     text-align: center;
-    position: relative;
-    max-width: calc(100% - 16rem);
 
-    &-inner {
-      /*border: 2px solid black;*/
-      width: calc(100% - 3rem);
-      height: calc(100% - 3rem);
-      position: absolute;
-      top: 1.5rem;
-      left: 1.5rem;
+    @media (--large) {
+      height: 40rem;
+      padding: 0 0 6rem;
+      justify-content: flex-end;
     }
   }
 
-  &__inner {
-    display: grid;
-    grid-template-columns: 8fr 4fr;
-    height: 100%;
-  }
+  &__copy {
+    background-color: color-mod(var(--color-blue) a(75%));
+    border: 1px dashed white;
+    color: white;
+    padding: 2rem;
+    margin: 2rem;
 
-  &__primary {
-    padding: 18rem 8rem 0;
-    font-size: 2rem;
-  }
-
-  &__secondary {
-    background-repeat: no-repeat;
-    background-position: -10rem 0;
-    background-size: cover;
-    max-height: 75rem;
+    @media (--large) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

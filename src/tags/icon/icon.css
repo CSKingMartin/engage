@@ -1,0 +1,10 @@
+.icon {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  fill: gray;
+}
+
+.esvg--primary {
+  fill: black;
+}

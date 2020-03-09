@@ -1,0 +1,14 @@
+.say-congrats {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: 4rem 2rem;
+  text-align: center;
+
+  .button {
+    background-color: transparent;
+    border: 1px solid white;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  }
+}

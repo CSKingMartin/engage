@@ -8,11 +8,13 @@
 
 
 :root {
+  --color-black: #000;
   --color-white: #fff;
   --color-yellow: #ffdd7f;
-  --color-powder-blue: #b1dbe2;
-  --color-bdazzled-blue: #375c91;
-  --color-claret: #6b1230;
+  --color-light-blue: #b1dbe2;
+  --color-blue: #062F4F;
+  --color-dark-blue: #062F4F;
+  --color-red: #6b1230;
 }
 
 div {
@@ -21,12 +23,18 @@ div {
 
 body {
   font-family: Noto Sans, sans-serif;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
 }
 
+body,
+.smooth-container {
+  scroll-behavior: smooth;
+}
+
 p {
-  line-height: 45px;
+  line-height: 2rem;
   margin: 0;
 }
 
@@ -44,7 +52,11 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+
+  @media (--large) {
+    font-size: 2rem;
+  }
 }
 
 h4 {
@@ -57,6 +69,21 @@ h5 {
 
 h6 {
   font-size: 1.25rem;
+}
+
+.is-hidden {
+  display: none;
+  visibility: hidden;
+
+  &--on-mobile {
+    display: none;
+    visibility: hidden;
+
+    @media (--medium) {
+      display: inline-block;
+      visibility: visible;
+    }
+  }
 }
 
 .has-rhythm {
@@ -76,11 +103,20 @@ h6 {
 }
 
 .text-jumbo {
-  font-size: 8rem;
+  font-size: 3rem;
+
+  @media (--large) {
+    font-size: 8rem;
+  }
+}
+
+.text-big {
+  font-size: 5rem;
+  line-height: 5rem
 }
 
 .is-blue {
-  background-color: var(--color-bdazzled-blue);
+  background-color: var(--color-blue);
 }
 
 .is-yellow {
@@ -88,11 +124,11 @@ h6 {
 }
 
 .is-light-blue {
-  background-color: var(--color-powder-blue);
+  background-color: var(--color-light-blue);
 }
 
 .is-red {
-  background-color: var(--color-claret);
+  background-color: var(--color-red);
 }
 
 .has-white-text {
@@ -100,7 +136,7 @@ h6 {
 }
 
 .has-blue-text {
-  color: var(--color-ucla-blue);
+  color: var(--color-blue);
 }
 
 .has-yellow-text {

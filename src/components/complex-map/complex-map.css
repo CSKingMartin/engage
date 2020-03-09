@@ -1,0 +1,66 @@
+.complex-map {
+  border: 1px solid black;
+  position: relative;
+  width: 100%;
+
+  &__states {
+    justify-content: center;
+    border: 1px solid black;
+    display: flex;
+    height: 10rem;
+    position: relative;
+    width: 10rem;
+
+    & > * {
+      flex: 1;
+
+      &.west {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      &:not(.west) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+      }
+    }
+
+    @media (--medium) {
+      min-width: 22.5rem;
+    }
+  }
+
+  .icon {
+    max-width: 12.5rem;
+
+    &[name="wa"] {
+      margin-bottom: -0.25rem;
+      margin-right: -0.25rem;
+      height: 50%;
+      width: auto;
+    }
+
+    &[name="id"] {
+      height: 95%;
+      margin-left: -0.5rem;
+      min-width: 12.25rem;
+      width: auto;
+    }
+
+    &[name="or"] {
+      height: 68%;
+      margin-top: -1.5rem;
+      margin-right: -0.25rem;
+      width: auto;
+
+      use {
+        fill: var(--color-blue);
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

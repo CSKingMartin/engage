@@ -1,26 +1,8 @@
 // next.config.js
 const withCSS = require('@zeit/next-css');
-const withImages = require('next-images');
-const webpack = require('webpack');
-const path = require('path');
-const pkgpath = require('packpath');
+const withPlugins = require('next-compose-plugins');
+const config = require('./webpack.config.js');
 
-const { directories } = require(path.resolve(pkgpath.self(), 'package.json'));
-const source = (...paths) => path.resolve(pkgpath.self(), './', ...paths);
-
-const config = {
-  cssModules: false,
-  webpack: (config, { dev }) => {
-    config.resolve.alias = {
-      '@tags': source('src/tags'),
-      '@components': source('src/components'),
-      '@layouts': source('src/layouts'),
-      '@assets': source('static/assets'),
-      ...config.resolve.alias
-    }
-
-    return config
-  }
-}
-
-module.exports = withImages(withCSS(config));
+module.exports = withPlugins([
+  withCSS
+], config);

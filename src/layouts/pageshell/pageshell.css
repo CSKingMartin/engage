@@ -1,0 +1,17 @@
+.pageshell {
+  display: inline-block;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+
+  &__header {
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+  }
+
+  &__main {
+    min-height: 100%;
+    z-index: 1;
+  }
+}

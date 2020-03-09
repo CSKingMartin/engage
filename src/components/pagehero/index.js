@@ -1,25 +1,33 @@
+import React, { useState } from 'react';
 import Wrapper from '@layouts/wrapper';
+import ReactResizeDetector from 'react-resize-detector';
 
 export const PageHero = (props) => {
   const {
     className,
-    bkgImg,
+    bkgImgDesktop,
+    bkgImgMobile,
     children,
     ...rest
   } = props;
 
-  const classes = ['pagehero', className].join(' ');
+  const classes = ['page-hero', className].join(' ');
+
+  // const [backgroundImage, updateImage] = useState(bkgImgMobile);
+
+  const styles = props.bkgImgDesktop ? { backgroundImage: `url(${bkgImgDesktop})` } : null;
+
+  const onResize = (e) => {
+    console.log(e);
+  };
 
   return (
     <div className={classes}>
-      <Wrapper className="pagehero__inner" variant="wide" {...rest}>
-        <div className="pagehero__primary is-blue has-white-text has-rhythm">
+      <ReactResizeDetector handleWidth onResize={onResize} />
+      <Wrapper variant="wide" style={styles} className="page-hero__container">
+        <div className="page-hero__copy">
           {children}
         </div>
-        <div
-          className="pagehero__secondary"
-          style={{ backgroundImage: `url(${bkgImg})` }}
-        />
       </Wrapper>
     </div>
   );

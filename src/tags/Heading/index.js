@@ -1,23 +1,24 @@
-// Heading/index.js
+import React from 'react';
 
 export const Heading = (props) => {
   const {
-    tagName: Tag,
+    tagName,
     className,
     variant,
     children,
     ...rest
   } = props;
 
+  const Element = tagName || variant || 'h1';
+
   const classes = ['heading', `heading--${variant}`, className].join(' ');
 
   return (
-    <Tag className={classes} {...rest}>{children}</Tag>
+    <Element className={classes} {...rest}>{children}</Element>
   );
 };
 
 Heading.defaultProps = {
-  tagName: 'h1',
   variant: 'h1'
 };
 

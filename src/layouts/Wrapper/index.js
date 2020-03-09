@@ -1,4 +1,5 @@
-// index.js
+import React from 'react';
+
 export const Wrapper = (props) => {
   const {
     variant,
@@ -8,8 +9,8 @@ export const Wrapper = (props) => {
   } = props;
 
   const classes = [
-    'Wrapper',
-    variant && `Wrapper--${variant}`,
+    'wrapper',
+    variant && `wrapper--${variant}`,
     className
   ];
 

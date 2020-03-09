@@ -1,4 +1,7 @@
-// flex.js
+import React from 'react';
+
+import Wrapper from '@layouts/wrapper';
+
 export const FlexChild = (props) => {
   const {
     variant,
@@ -8,8 +11,9 @@ export const FlexChild = (props) => {
   } = props;
 
   const classes = [
-    'FlexChild',
-    variant && `FlexChild--${variant}`,
+    'flex__child',
+    variant && `flex__child--${variant}`,
+    'has-rhythm',
     className
   ];
 
@@ -31,8 +35,8 @@ export const Flex = (props) => {
   } = props;
 
   const classes = [
-    'Flex',
-    variant && `Flex--${variant}`,
+    'flex',
+    variant && `flex--${variant}`,
     className
   ];
 
@@ -40,9 +44,13 @@ export const Flex = (props) => {
 
   return (
     <div className={classStack} {...rest}>
-      {children}
+      <Wrapper variant="widest" className="flex__inner">
+        {children}
+      </Wrapper>
     </div>
   );
 };
+
+Flex.Child = FlexChild;
 
 export default Flex;
